@@ -56,7 +56,7 @@ call plug#begin()
     Plug 'townk/vim-autoclose'
     Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
     Plug 'sheerun/vim-polyglot'
-    Plug 'mhinz/vim-startify'
+    Plug 'mhinz/vim-startify', {'branch': 'center'}
     Plug 'gelguy/wilder.nvim'
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
