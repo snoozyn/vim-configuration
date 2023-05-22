@@ -1,6 +1,6 @@
 syntax on
 
-set hlsearch
+"set hlsearch
 hi Search ctermbg=LightYellow
 hi Search ctermfg=Red
 
@@ -62,7 +62,9 @@ call plug#begin()
     Plug 'roxma/vim-hug-neovim-rpc'
     Plug 'tpope/vim-eunuch'
     Plug 'airblade/vim-gitgutter'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+    Plug 'junegunn/goyo.vim'
+    Plug 'othree/html5.vim'
 call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
@@ -241,3 +243,18 @@ let g:mkdp_port = ''
 let g:mkdp_page_title = '「${name}」'
 let g:mkdp_filetypes = ['markdown', 'md', 'mkd']
 let g:mkdp_theme = 'dark'
+
+"mappings for markdown preview
+nmap <C-s> <Plug>MarkdownPreview
+nmap <M-s> <Plug>MarkdownPreviewStop
+nmap <C-p> <Plug>MarkdownPreviewToggle
+
+" set up nerdcommenter
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDCreateDefaultMappings = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDToggleCheckAllLines = 1
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
