@@ -30,7 +30,8 @@ call plug#begin()
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'scrooloose/nerdcommenter'
+    "Plug 'scrooloose/nerdcommenter'
+    Plug 'tpope/vim-commentary'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'Xuyuanp/nerdtree-git-plugin'
     Plug 'airblade/vim-gitgutter'
@@ -154,8 +155,6 @@ let g:NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let g:NERDTreeWinSize=30
 let g:NERDTreeChDirMode=2
 
-" customize startify screen by centering it
-let g:startify_custom_header = 'startify#center(startify#fortune#cowsay())'
 
 " returns all modified files of the current git repo
 " `2>/dev/null` makes the command fail quietly, so that when we are not
