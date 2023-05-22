@@ -62,6 +62,7 @@ call plug#begin()
     Plug 'roxma/vim-hug-neovim-rpc'
     Plug 'tpope/vim-eunuch'
     Plug 'airblade/vim-gitgutter'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 let g:airline#extensions#tabline#enabled = 1
@@ -202,3 +203,41 @@ augroup END
 
 " set up vim to use python3
 let g:python3_host_prog = '/usr/local/bin/python3'
+
+"set up vim to resolve merge conflicts
+let g:diffconflict_author_format = '%an <%ae>'
+let g:diffconflict_date_format = '%aI'
+let g:diffconflict_timestamp_format = '%at'
+let g:diffconflict_diff_format = 'diff'
+
+" set up to use markdown preview
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_close = 1
+let g:mkdp_refresh_slow = 0
+let g:mkdp_command_for_global = 0
+let g:mkdp_open_to_the_world = 0
+let g:mkdp_open_ip = ''
+let g:mkdp_browser = ''
+let g:mkdp_echo_preview_url = 1
+let g:mkdp_browserfunc = ''
+let g:mkdp_markdown_css = ''
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false,
+    \ 'disable_filename': 0,
+    \ 'toc': {}
+    \ }
+let g:mkdp_markdown_css = ''
+let g:mkdp_highlight_css = ''
+let g:mkdp_port = ''
+let g:mkdp_page_title = '「${name}」'
+let g:mkdp_filetypes = ['markdown', 'md', 'mkd']
+let g:mkdp_theme = 'dark'
