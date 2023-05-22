@@ -9,3 +9,7 @@ My own .vimrc file.
 * make sure you have vim-plug installed on your machine 
 # ASCII Art for Startup
 Got from online, can download from this github and then use as your own. Make sure that you change the reference to that txt file.
+
+# Screenshot of custom start page (using gruvbox dark):
+![screenshot1](VIM_SCREENSHOT.png)
+
