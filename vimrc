@@ -182,7 +182,7 @@ let g:startify_lists = [
         \ ]
 
 let g:startify_custom_header =
-             \ startify#pad(readfile('vim_ascii.txt'))
+             \ startify#pad(readfile('/Users/justinvnnguyen/.vim/vim_ascii.txt'))
 
 " Neovim or Vim with yarp
 call wilder#set_option('pipeline', [

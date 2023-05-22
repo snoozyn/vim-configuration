@@ -13,3 +13,5 @@ Got from online, can download from this github and then use as your own. Make su
 # Screenshot of custom start page (using gruvbox dark):
 ![screenshot1](VIM_SCREENSHOT.png)
 
+# Screenshot of working in VIM:
+![screenshot2](VIM_CODING_SCREENSHOT.png)
